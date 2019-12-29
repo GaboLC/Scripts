@@ -11,10 +11,25 @@ install_programs.ps1 & update_programs.ps1: This script is based on scoop and it
 To use
 
 ```
-install_programs.ps1 & update_programs.ps1
+* install_programs.ps1
+* update_programs.ps1
 ```
 
 You should have to install [Scoop](https://scoop.sh/)
+
+### Install Scoop
+
+To installs Scoop firts open a Powershell terminal and then write the next commands:
+
+```
+Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+```
+
+And
+
+```
+Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
+```
 
 ## Built With
 
