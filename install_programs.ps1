@@ -14,7 +14,7 @@ scoop bucket add extras
 Start-Sleep -s 5
 
 #Array of programs
-$programs = "winrar","googlechrome","firefox","opera","vscode","arduino","nodejs","mongodb-compass-community","git","anaconda3","winscp","steam","inkscape","obs-studio","telegram"
+$programs = "winrar","googlechrome","firefox","opera","vscode","arduino","nodejs","mongodb-compass-community","git","python","anaconda3","notepadplusplus","winscp","steam","inkscape","obs-studio","telegram"
 Write-Output  "This script will install", $programs
 
 #Programs installation
