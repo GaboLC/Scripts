@@ -15,9 +15,9 @@ To use
 * update_programs.ps1
 ```
 
-You should have to install [Scoop](https://scoop.sh/)
+this script automatically install [Scoop](https://scoop.sh/)
 
-### Install Scoop
+### If that doesn't work, you can also install Scoop like this
 
 To installs Scoop firts open a Powershell terminal and then write the next commands:
 
