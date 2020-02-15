@@ -1,55 +1,26 @@
-#Programs
+#Change execution policy
+Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+Write-Output "Execition Policy changed"
+Start-Sleep -s 2
 
-#Browsers
+# #Installing Scoop
+Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
+Write-Output "Scoop Installed"
+Start-Sleep -s 2
 
-#winrar
-Scoop install winrar
-#Google Chrome
-Scoop install googlechrome
-#Firefox
-Scoop install firefox
-#Opera
-Scoop install opera
+#Adding extra bucket
+scoop bucket add extras
 
-#Dev tools
+Start-Sleep -s 5
 
-#Vs code
-Scoop install vscode
+#Array of programs
+$programs = "winrar","googlechrome","firefox","opera","vscode","arduino","nodejs","mongodb-compass-community","git","anaconda3","winscp","steam","inkscape","obs-studio","telegram"
+Write-Output  "This script will install", $programs
 
-#Arduino ide
-Scoop install arduino
+#Programs installation
 
-#Node.js
-Scoop install nodejs
-
-#Mongodb
-Scoop install mongodb-compass-community
-
-#git
-Scoop install git
-
-#Anaconda3
-Scoop install anaconda3
-
-#Computing
-
-#WinSCP
-Scoop install winscp
-
-#Gaming
-
-#Steam
-Scoop install steam
-
-#desing
-
-#Inkscape
-Scoop install inkscape
-
-#OBS Studio
-Scoop install obs-studio
-
-#Others
-
-#Telegram
-Scoop install telegram
+for ($i = 0; $i -lt $programs.Count; $i++) {
+    Scoop install $programs[$i]
+    Write-Output $programs[$i] "INSTALLED"
+    Start-Sleep -s 2
+}
