@@ -4,7 +4,13 @@ This is a repository to upload all my personal scripts. If you're interested in 
 
 ## Info about scripts
 
-install_programs.ps1 & update_programs.ps1: This script is based on scoop and its funcion is to install and update all the programs that i usually use.
+## install-update_programs
+
+This folder contains 2 scripts: install_programs.ps1 and update_programs.ps1
+
+install_programs.ps1: This script installs a series of programs that I use frequently.
+
+update_programs.ps1: And this updates all the installed programs with the above script.
 
 ### Getting Started
 
@@ -12,25 +18,21 @@ To use
 
 ```
 * install_programs.ps1
-* update_programs.ps1
 ```
 
 this script automatically install [Scoop](https://scoop.sh/)
 
-### If that doesn't work, you can also install Scoop like this
-
-To installs Scoop firts open a Powershell terminal and then write the next commands:
-
+To change the programs you should modify the line number 21.
 ```
-Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+21 $programs = "winrar","googlechrome","firefox","opera","vscode","arduino","nodejs","mongodb-compass-community","python","anaconda3","notepadplusplus","r","rstudio","winscp","steam","inkscape","obs-studio","telegram"
 ```
 
-And
+Then, you can find the list of programs you want to install on [MainBucket](https://github.com/ScoopInstaller/Main/tree/master/bucket) and [ExtraBucket](https://github.com/lukesampson/scoop-extras)
 
-```
-Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
-```
-
-## Built With
+### Built With
 
 - [Scoop](https://scoop.sh/) - A Windows Package Manager
+
+## Own_Download.ps1
+
+This is a script in which I try to do the same as install_programs.ps1 but on my own
