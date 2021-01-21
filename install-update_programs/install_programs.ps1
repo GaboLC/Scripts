@@ -4,12 +4,12 @@ Write-Output "Execition Policy changed"
 Start-Sleep -s 2
 
 #Installing Scoop
-Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
+REM Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
 Write-Output "Scoop Installed"
 Start-Sleep -s 2
 
 #install git to add extra bucket
-Scoop install git
+scoop install git
 Start-Sleep -s 2
 
 #Adding extra bucket
@@ -25,7 +25,7 @@ Start-Sleep -s 2
 #Programs installation
 
 for ($i = 0; $i -lt $programs.Count; $i++) {
-    Start-Process powershell.exe /c Scoop install $programs[$i]
+    scoop install $programs[$i]
     Write-Output $programs[$i] "INSTALLED"
     Start-Sleep -s 2
 }
